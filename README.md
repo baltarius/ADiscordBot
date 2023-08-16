@@ -1,4 +1,4 @@
-#A simple Discord bot by a python learner to python learners.
+# A simple Discord bot by a python learner to python learners.
 
 Feel free to contact me for more informations or to participate
 in the developping of the project. 

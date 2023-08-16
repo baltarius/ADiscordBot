@@ -18,8 +18,12 @@ How to use it (assuming you already installed python 3.9 or higher):
 - pip freeze -r requirements.txt
 
 - Open the bot directory in File Explorer
-- Edit (notepad) the file .env
-- Insert your bot token in the file
+- Create a file .env (literally ".env")
+- Insert these lines in the .env:
+DISCORD_TOKEN=
+DISCORD_GUILD=[]
+- Copy your bot's token after the =
+- Copy your server's ID in the []
 - Save it and exit
 - Open a terminal (Start > run > cmd)
 - Go to the bot directory

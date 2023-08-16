@@ -1,0 +1,9 @@
+{
+  "prefix": "!",
+  "token": "",
+  "permissions": "8",
+  "application_id": "YOUR_APPLICATION_ID_HERE",
+  "sync_commands_globally": true,
+  "owners": [
+  ]
+}

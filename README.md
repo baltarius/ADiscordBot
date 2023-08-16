@@ -1,4 +1,4 @@
-# A simple Discord bot by a python learner to python learners.
+A simple Discord bot by a python learner to python learners.
 
 Feel free to contact me for more informations or to participate
 in the developping of the project. 
@@ -11,7 +11,7 @@ can learn with exemples and make experiences on their own.
 
 
 
-#How to use it (assuming you already installed python 3.9 or higher):
+How to use it (assuming you already installed python 3.9 or higher):
 
 - Open a terminal (Start > run > cmd)
 - Go to the bot directory

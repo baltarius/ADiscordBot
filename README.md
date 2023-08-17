@@ -18,10 +18,7 @@ How to use it (assuming you already installed python 3.9 or higher):
 - pip freeze -r requirements.txt
 
 - Open the bot directory in File Explorer
-- Create a file .env (literally ".env")
-- Insert these lines in the .env:
-DISCORD_TOKEN=
-DISCORD_GUILD=[]
+- Edit .env (notepad)
 - Copy your bot's token after the =
 - Copy your server's ID in the []
 - Save it and exit

@@ -5,7 +5,6 @@ DateTime==5.1
 discord==2.2.3
 discord.py==2.2.3
 emoji==2.4.0
-logging==0.4.9.6
 Pillow==9.5.0
 platformdirs==3.10.0
 python-dotenv==1.0.0

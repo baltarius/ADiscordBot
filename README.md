@@ -25,3 +25,5 @@ How to use it (assuming you already installed python 3.9 or higher):
 - Open a terminal (Start > run > cmd)
 - Go to the bot directory
 - type: python bot.py
+
+Make sure to type "!sync *" after inviting the bot to your server, so the commands are synced.

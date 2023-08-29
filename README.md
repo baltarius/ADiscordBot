@@ -15,7 +15,7 @@ How to use it (assuming you already installed python 3.9 or higher):
 
 - Open a terminal (Start > run > cmd)
 - Go to the bot directory
-- pip freeze -r requirements.txt
+- pip install -r requirements.txt
 
 - Open the bot directory in File Explorer
 - Edit .env (notepad)

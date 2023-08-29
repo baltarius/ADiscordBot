@@ -8,8 +8,17 @@ The main function here is get_server_database.
 Author: Elcoyote Solitaire
 """
 import sqlite3
+import json
+import pytz
 
 from discord.ext import commands
+
+
+time_zone = pytz.timezone("US/Eastern")
+
+with open("config.json", "r", encoding="utf-8") as jsonfile:
+    config = json.load(jsonfile)
+cprefix = config["prefix"]
 
 
 def get_server_database(server_id):
@@ -62,7 +71,9 @@ def get_server_database(server_id):
 
     cur.execute('''CREATE TABLE IF NOT EXISTS suggestion
         (number INTEGER PRIMARY KEY AUTOINCREMENT,
-        id INTEGER)''')
+        id INTEGER,
+        authorid INTEGER,
+        decision TEXT)''')
     conn.commit()
 
     cur.execute('''CREATE TABLE IF NOT EXISTS exception
@@ -89,6 +100,28 @@ def is_exception(server_id, channel_id, reason):
     conn.close()
 
     return bool(row)
+
+
+def is_suggestion(server_id, channel_id):
+    """
+    Verify if the channel is in the exception's list.
+
+    Args:
+        server_id: The ID of the server.
+        channel_id: The ID of the channel to verify.
+        reason: The specific reason to be an exception.
+    """
+    conn, cur = get_server_database(server_id)
+    cur.execute("SELECT id FROM setup WHERE chans = ?", ("suggestion",))
+    row = cur.fetchone()
+    conn.close()
+    if row:
+        if channel_id == row[0]:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 class Intercogs(commands.Cog, name="intercogs"):
